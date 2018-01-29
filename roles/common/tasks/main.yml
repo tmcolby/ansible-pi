@@ -36,15 +36,19 @@
   become_method: sudo
   shell: /home/pi/init/set-keyboard-layout.sh
 
-- name: 'Install packages'
-  apt:
-    pkg={{item}}
-    state=installed
-  become: yes
-  become_method: sudo
-  with_items:
-    - tightvncserver
+  #- name: 'Install packages'
+  #  apt:
+  #    pkg={{item}}
+  #    state=installed
+  #  become: yes
+  #  become_method: sudo
+  #  with_items:
+  #    - tightvncserver
 
+  #TODO:
+  #blow out the init folder that has the init scripts
+
+  #change this to a handler.  notify handler appropriatly from tasks that require it.
 - name: 'Reboot'
   become: yes
   become_method: sudo

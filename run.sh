@@ -6,7 +6,7 @@ if [ "$specific_hosts" = "y" ]
 then
   echo "Which hosts group do you want to run this on?"
   read host_group
-  ansible-playbook -s -i hosts ansible-pi.yml -l $host_group
+  ansible-playbook -s -i hosts ansible-pi.yml -l $host_group -c paramiko
 else
-  ansible-playbook -s -i hosts ansible-pi.yml
+  ansible-playbook -s -i hosts ansible-pi.yml -c paramiko
 fi

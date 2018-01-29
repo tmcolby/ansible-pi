@@ -1,0 +1,6 @@
+[pis]
+raspberrypi.local
+[pis:vars]
+ansible_user=pi 
+ansible_password=raspberry
+

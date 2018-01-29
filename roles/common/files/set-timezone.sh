@@ -1,3 +1,3 @@
 # Set time zone and time 
-echo "America/Chicago" > /etc/timezone
+echo "America/Los_Angeles" > /etc/timezone
 dpkg-reconfigure -f noninteractive tzdata
